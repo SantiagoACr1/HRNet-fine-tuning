@@ -4,14 +4,14 @@ Este repositorio contiene la **Evaluación de la adaptabilidad del modelo HRNet 
 
 El proyecto se desarrolló y ejecutó principalmente en **Google Colab** usando **PyTorch**.
 
-El conjunto de datos se encuentra en: 
+El conjunto de datos se encuentra en: https://drive.google.com/drive/folders/12qTzHrCekAGmhUnxHahUWpo2gwPC_DgN?usp=drive_link
 
 ---
 
 ## 📁 Estructura del proyecto
 
 ```
-Replication-LoveDA/
+HRNet-fine-tuning/
 │
 ├── eval.py                   # Evaluación del modelo y cálculo de métricas
 ├── predict.py                # Generación de estimaciones sobre el conjunto de test
