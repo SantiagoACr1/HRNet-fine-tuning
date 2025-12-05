@@ -1,9 +1,11 @@
-# 🛰️ Réplica de segmentación semántica con LoveDA con HRNet
+# 🛰️ Segmentación semántica con HRNet
 
-Este repositorio contiene la **Evaluación de la reproducibilidad y el desempeño del modelo HRNet en la segmentación semántica de uso y cobertura del suelo con el conjunto de datos
-LoveDA**.  
-El proyecto se desarrolló y ejecutó principalmente en **Google Colab** usando **PyTorch** y la estructura oficial del repositorio **LoveDA (https://github.com/Junjue-Wang/LoveDA/tree/master/Semantic_Segmentation)**.
-La segmentación realizada por Wang et al. (2021) contiene 11 arquitecturas, pero la réplica se realiza sólo sobre HRNet, por tanto, el repositorio se estructura con base en los requerimientos para esa arquitectura
+Este repositorio contiene la **Evaluación de la adaptabilidad del modelo HRNet en segmentación semántica de uso y cobertura del suelo**.  
+
+El proyecto se desarrolló y ejecutó principalmente en **Google Colab** usando **PyTorch**.
+
+El conjunto de datos se encuentra en: 
+
 ---
 
 ## 📁 Estructura del proyecto
@@ -13,6 +15,7 @@ Replication-LoveDA/
 │
 ├── eval.py                   # Evaluación del modelo y cálculo de métricas
 ├── predict.py                # Generación de estimaciones sobre el conjunto de test
+├── train.py                  # Entrenamiento del modelo sobre el nuevo conjunto de datos
 ├── scripts/
 │   ├── predict_test.sh       # Script Bash para ejecutar la inferencia
 │   └── eval_hrnetw32.sh      # Script Bash para la evaluación
@@ -67,19 +70,6 @@ Salida esperada:
   ```
 - Imágenes de validación coloreadas según el `COLOR_MAP`.
 
----
-
-## 🎨 Leyenda de clases LoveDA
-
-| Código | Clase        | Color (RGB)  |
-|--------:|--------------|--------------|
-| 0 | Building     | Rojo (255, 0, 0) |
-| 1 | Road         | Amarillo (255, 255, 0) |
-| 2 | Water        | Azul (0, 0, 255) |
-| 3 | Barren       | Lila (200, 0, 200) |
-| 4 | Forest       | Verde (0, 255, 0) |
-| 5 | Agriculture  | Naranja pálido (255, 200, 100) |
-| 6 | Background   | Blanco (255, 255, 255) |
 
 ---
 
