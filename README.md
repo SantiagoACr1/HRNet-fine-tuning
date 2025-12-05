@@ -18,9 +18,9 @@ HRNet-fine-tuning/
 ├── train.py                  # Entrenamiento del modelo sobre el nuevo conjunto de datos
 ├── scripts/
 │   ├── predict_test.sh       # Script Bash para ejecutar la inferencia
+│   ├── train.sh              # Script Bash para ejecutar el entrenamiento
 │   └── eval_hrnetw32.sh      # Script Bash para la evaluación
-├── configs/
-│   └── baseline.hrnetw32     # Configuración del modelo HRNet-W32
+├── configs                   # Configuración del modelo HRNet-W32
 └── README.md
 ```
 
@@ -48,8 +48,8 @@ Ejecuta el script de predicción:
 ```
 
 Este comando:
-- Carga los pesos del modelo (`hrnetw32.pth`)
-- Procesa las imágenes del conjunto **Test** de LoveDA
+- Carga los pesos del modelo reentrenado
+- Procesa las imágenes del conjunto **Test**
 - Guarda las estimaciones segmentadas en la carpeta `out/`
 
 ---
@@ -68,8 +68,6 @@ Salida esperada:
   ```
   ./log/confusion_matrix.npy
   ```
-- Imágenes de validación coloreadas según el `COLOR_MAP`.
-
 
 ---
 
