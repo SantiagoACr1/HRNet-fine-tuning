@@ -39,7 +39,22 @@ pip install torch torchvision
 
 ## 🚀 Ejecución
 
-### 1. Generar predicciones
+### 1. Entrenar HRNet con nuevas imágenes
+
+Ejecuta el script de entrenamiento:
+
+```bash
+!bash ./scripts/train_hrnetw32.sh
+```
+
+Este comando:
+- Carga los pesos del modelo de LoveDA
+- Ajusta el modelo a las nuevas clases
+- Calcula las pérdidas por época
+
+---
+
+### 2. Generar estimaciones
 
 Ejecuta el script de predicción:
 
@@ -54,7 +69,7 @@ Este comando:
 
 ---
 
-### 2. Evaluar el modelo
+### 3. Evaluar el modelo
 
 Para calcular métricas como **IoU**, **mIoU**, **precisión** y generar la **matriz de confusión**, usa:
 
